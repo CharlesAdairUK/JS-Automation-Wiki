@@ -1,12 +1,27 @@
 {
   "name": "automation-js-mentoring",
   "version": "1.0.0",
-  "description": "",
+  "description": "Unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Charles Adair",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://git.epam.com/charles_adair/automation-js.git"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.7",
+    "husky": "^8.0.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
 }
