@@ -1,10 +1,13 @@
 {
   "name": "automation-js-mentoring",
+  "type": "module",
   "version": "1.0.0",
   "description": "Unit tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint ./ --fix",
+    "coverage": "c8 npm test"
   },
   "keywords": [],
   "author": "Charles Adair",
@@ -15,7 +18,9 @@
   },
   "devDependencies": {
     "eslint": "^8.46.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.28.0"
   },
   "dependencies": {
     "c8": "^8.0.1",
