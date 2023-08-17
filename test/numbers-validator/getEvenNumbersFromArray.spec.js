@@ -1,5 +1,8 @@
 import { expect } from 'chai';
-import NumbersValidator from '../../app/numbers_validator.js';
+import NumbersValidator from '../../app/numbers_validator.cjs';
+
+const NumbersValidator = require('../../app/numbers_validator.cjs');
+
 
 describe('isArrayEven positive tests', () => {
   let validator;
