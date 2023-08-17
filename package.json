@@ -1,6 +1,6 @@
 {
   "name": "automation-js-mentoring",
-  "type": "module",
+  
   "version": "1.0.0",
   "description": "Unit tests",
   "main": "index.js",
