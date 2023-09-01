@@ -1,0 +1,38 @@
+{
+  "name": "automation-js-mentoring",
+  "version": "1.0.0",
+  "description": "Unit tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint ./ --fix",
+    "coverage": "c8 npm test",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "Charles Adair",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://git.epam.com/charles_adair/automation-js.git"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^8.15.5",
+    "@wdio/local-runner": "^8.15.4",
+    "@wdio/mocha-framework": "^8.15.4",
+    "@wdio/spec-reporter": "^8.15.0",
+    "chromedriver": "^116.0.0",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.28.0",
+    "wdio-chromedriver-service": "^8.1.1"
+  },
+  "dependencies": {
+    "c8": "^8.0.1",
+    "chai": "^4.3.7",
+    "husky": "^8.0.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
+}
