@@ -33,7 +33,6 @@ describe("Test Suite", () => {
 
     it("Fifth test - wait for dialog box to image to be displayed until clicking", async () => {
         await browser.url("https://www.wikipedia.org/");
-        await $('button[id="js-lang-list-button"]').click();
         const languageList = await $('button[id="js-lang-list-button"]');
         await languageList.waitForDisplayed();
         await $('button[id="js-lang-list-button"]').click();
