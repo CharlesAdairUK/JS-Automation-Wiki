@@ -2,8 +2,6 @@ const { expect } = require("chai");
 
     describe("Test Suite", () => {
 
-        //Homework Task #1
-
         it("First test - Get Homepage Title", async () => {
             await browser.url("");
             const pageTitle = await browser.getTitle();
@@ -66,8 +64,6 @@ const { expect } = require("chai");
             const pageTitle = await browser.getTitle();
             expect(pageTitle).to.equal("Wikipedia, the free encyclopedia");
         });
-
-        //Homework task #2
 
         it("Ninth task - Execute() task - Change border colour of wiki home icon to red", async () => {
             const wikiHomeIcon = await $('img[class="mw-logo-icon"]');
