@@ -1,4 +1,5 @@
 exports.config = {
+   
     //
     // ====================
     // Runner Configuration
@@ -88,7 +89,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://www.wikipedia.org/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -232,6 +233,34 @@ exports.config = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
+
+    afterTest: async (test, context, result) => {
+
+        // take a screenshot anytime a test fails and throws an error
+    
+        if (result.error) {
+    
+          console.log(`Screenshot for the failed test ${test.title} is saved`);
+    
+          const filename = test.title + '.png';
+    
+          const dirPath = './artifacts/screenshots/';
+    
+          if (!existsSync(dirPath)) {
+    
+            mkdirSync(dirPath, {
+    
+              recursive: true,
+    
+            });
+    
+          }
+    
+          await browser.saveScreenshot(dirPath + filename);
+    
+        }
+    
+      },
 
 
     /**
