@@ -1,104 +1,147 @@
 const { expect } = require("chai");
 
-    describe("Test Suite", () => {
+browser.addCommand("waitAndClick", async function () {
+    await this.waitForDisplayed({ timeout: 5000 });
+    await this.click()
+}, true);
 
-        it("First test - Get Homepage Title", async () => {
-            await browser.url("");
-            const pageTitle = await browser.getTitle();
-            expect(pageTitle).to.equal("Wikipedia");
-        });
-
-        it( "Second test - Search for 'EPAM'", async () => {
-            await browser.url("");
-            await $('input[id="searchInput"]').setValue('Epam');
-            await $("//button[@type='submit']").click();
-            const pageTitle = await browser.getTitle()        
-            expect(pageTitle).to.include("Epam");
-        });
-
-        it("Third test - Change language of website", async () => {
-            await browser.url("");
-            await $('button[id="js-lang-list-button"]').click();
-            browser.pause(5000);
-            await $('a[id="js-link-box-de"]').click();
-            const pageTitle = await browser.getTitle();
-            expect(pageTitle).to.equal("Wikipedia – Die freie Enzyklopädie");
-        });
-
-        it("Fourth test - Ensure language dropdown list appears", async () => {
-            await browser.url("");
-            await $('button[id="js-lang-list-button"]').click();
-            const languageList = await $('div[id="js-lang-lists"');
-            expect (languageList).to.exist;
-        });
-
-        it("Fifth test - wait for dialog box to image to be displayed until clicking", async () => {
-            await browser.url("");
-            const languageList = await $('button[id="js-lang-list-button"]');
-            await languageList.waitForDisplayed();
-            await $('button[id="js-lang-list-button"]').click();
-        });
-
-
-        it("Sixth test - Search for 'EPAM' but before hitting enter, add 'Offices in UK' to search'", async () => {
-                await browser.url("");
-                await $('input[id="searchInput"]').setValue('Epam');
-                await $('input[id="searchInput"]').addValue(' offices in UK');
-                await $("//button[@type='submit']").click();
-                const pageTitle = await browser.getTitle();
-                expect(pageTitle).to.include("Epam offices in UK");
-                await browser.pause(3000);
-        });
-
-        it("Seventh test - Click on the hamburger menu logo and wait fo the dropdown list to be displayed'", async () => {
-            await browser.url("/w/index.php?search=EPAM+offices+in+UK&title=Special%3ASearch&ns0=1");
-            await $("//div/nav").click();
-            const navDropdown = await $('div[class="vector-dropdown-content"]');
-            await navDropdown.waitForDisplayed();
-        });
-
-        it("Eighth test - Click on the wikipedia logo to return to the homepage'", async () => {
-            await browser.url("/w/index.php?search=EPAM+offices+in+UK&title=Special%3ASearch&ns0=1");
-            const wikiHomeIcon = await $('img[class="mw-logo-icon"]');
-            await wikiHomeIcon.click();
-            const pageTitle = await browser.getTitle();
-            expect(pageTitle).to.equal("Wikipedia, the free encyclopedia");
-        });
-
-        it("Ninth task - Execute() task - Change border colour of wiki home icon to red", async () => {
-            const wikiHomeIcon = await $('img[class="mw-logo-icon"]');
-            await browser.execute(function (wikiHomeIcon) {
-                wikiHomeIcon.style.border = 'red solid 2px';
-            }, wikiHomeIcon);
-            await browser.pause(3000);
+browser.addCommand("waitForPageToLoad", function (timeout = 10000) {
+    return browser.waitUntil(
+        () => {
+            return browser.execute(() => {
+                return document.readyState === "complete";
             });
+        },
+        {
+            timeout: timeout,
+            timeoutMsg: "Page did not load completely within the specified timeout",
+        }
+    );
+}, true);
 
-        it("Tenth task - waitUntil() task - Search for 'Dog' and assert that the title text is appropriate", async() =>{
+describe("Test Suite", () => {
+
+    it("First test - Get Homepage Title", async () => {
+        await browser.url("");
+        const pageTitle = await browser.getTitle();
+        expect(pageTitle).to.equal("Wikipedia");
+    });
+
+    it( "Second test - Search for 'EPAM'", async () => {
+        await browser.url("");
+        const inputBox = await $('input[id="searchInput"]');
+        const submitButton = await $("//button[@type='submit']");
+        inputBox.waitAndClick();
+        await inputBox.setValue('Epam');
+        await submitButton.waitAndClick();
+        const pageTitle = await browser.getTitle();    
+        expect(pageTitle).to.include("EPAM");
+    });
+
+    it("Third test - Change language of website", async () => {
+        await browser.url("");
+        const langListButton = await $('button[id="js-lang-list-button"]');
+        const deButton = await $('a[id="js-link-box-de"]');
+        await langListButton.waitForClickable({ timeout: 5000 });
+        await langListButton.waitAndClick();
+        await deButton.waitAndClick();    
+        const pageTitle = await browser.getTitle();
+        expect(pageTitle).to.equal("Wikipedia – Die freie Enzyklopädie");
+    });
+
+    it("Fourth test - Ensure language dropdown list appears", async () => {
+        await browser.url("");
+        const langListButton = await $('button[id="js-lang-list-button"]');
+        await langListButton.waitForClickable({ timeout: 5000 });
+        await langListButton.waitAndClick();
+        const languageList = await $('div[id="js-lang-lists"');
+        expect (languageList).to.exist;
+    });
+
+    it("Fifth test - wait for dialog box to image to be displayed until clicking", async () => {
+        await browser.url("");
+        const languageList = await $('button[id="js-lang-list-button"]');
+        languageList.waitAndClick();
+    });
+
+    it("Sixth test - log into account", async () => {
+        await browser.url("/w/index.php?returnto=Main+Page&title=Special:UserLogin&centralAuthAutologinTried=1&centralAuthError=Not+centrally+logged+in");
+        const userNameInputBox = await $('input[id="wpName1"]');
+        const passwordInputBox = await $('input[id="wpPassword1"]');
+        const submitButton = await $("//button[@type='submit']");
+        await userNameInputBox.waitAndClick();
+        await userNameInputBox.setValue("EpamTestCharlie");
+        await passwordInputBox.waitAndClick();
+        await passwordInputBox.setValue("Tsotester123")
+        await submitButton.waitAndClick();
+        const profileButton = await $('li[id="pt-userpage-2');
+        await profileButton.waitAndClick();
+        const pageTitle = await browser.getTitle();
+        expect(pageTitle).to.include("EpamTestCharlie");
+    });
+
+    it("Seventh test - Search for 'EPAM' but before hitting enter, add 'Offices in USA' to search'", async () => {
             await browser.url("");
-            await $('input[id="searchInput"]').setValue('Dog');
-            await $("//button[@type='submit']").click();
-            await browser.waitUntil(
-                async () => (await browser.getTitle() === "Dog - Wikipedia"),
-                {
-                    timeout: 5000,
-                    interval: 600,
-                    timeoutMsg: "Title was not loaded"
-                }
-            )
-        
+            const inputBox = await $('input[id="searchInput"]');
+            const submitButton = await $("//button[@type='submit']");
+            await inputBox.waitAndClick();
+            await inputBox.setValue('Epam');
+            await inputBox.addValue(' offices in USA');
+            await submitButton.waitAndClick()
+            const pageTitle = await browser.getTitle();
+            expect(pageTitle).to.include("Epam offices in USA");
+    });
+
+    it("Eigth test - Search for content with no direct option, click on suggestion and assert suggested page has been opened", async () => {
+        await browser.url("");
+        const inputBox = await $('input[id="searchInput"]');
+        const submitButton = await $("//button[@type='submit']");
+        await inputBox.waitAndClick();
+        await inputBox.setValue('Epam');
+        await inputBox.addValue(' offices in USA');
+        await submitButton.waitAndClick()
+        const pageTitle = await browser.getTitle();
+        expect(pageTitle).to.include("Epam offices in USA");
+        const suggestionButton = await $('a[id="mw-search-DYM-suggestion"]');
+        await suggestionButton.waitAndClick();
+        const pageTitle2 = await browser.getTitle();
+        expect(pageTitle2).to.include("epic office in usa");
+    });
+
+    it("Ninth test - Execute() task - Change border colour of wiki home icon to red", async () => {
+        const wikiHomeIcon = await $('img[class="mw-logo-icon"]');
+        await browser.execute(function (wikiHomeIcon) {
+            wikiHomeIcon.style.border = 'red solid 2px';
+        }, wikiHomeIcon);
         });
 
-        it("Eleventh task - get and set cookies task", async() =>{
-            await browser.pause(5000);
-            await browser.setCookies([
-                {
-                    name: "customCookie",
-                    value: "42",
-                },
-            ]);
-            const cookie = await browser.getCookies(["customCookie"]);
-            console.log("cookie value");
-            console.dir(cookie);
-        });
+    it("Tenth test - waitUntil() task - Search for 'Cat' and assert that the title text is appropriate", async() =>{
+        await browser.url("");
+        const inputBox = await $('input[id="searchInput"]');
+        const submitButton = await $("//button[@type='submit']");
+        await inputBox.setValue('Cat');
+        await submitButton.waitAndClick();
+        await browser.waitUntil(
+            async () => (await browser.getTitle() === "Cat - Wikipedia"),
+            {
+                timeout: 5000,
+                interval: 600,
+                timeoutMsg: "Title was not loaded"
+            }
+        )
+    
+    });
 
- });
+    it("Eleventh test - get and set cookies task", async() =>{
+        await browser.setCookies([
+            {
+                name: "customCookie",
+                value: "42",
+            },
+        ]);
+        const cookie = await browser.getCookies(["customCookie"]);
+        console.log("cookie value");
+        console.dir(cookie);
+    });
+
+});
