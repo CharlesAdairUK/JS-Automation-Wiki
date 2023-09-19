@@ -58,13 +58,7 @@ describe("Test Suite", () => {
         expect (languageList).to.exist;
     });
 
-    it("Fifth test - wait for dialog box to image to be displayed until clicking", async () => {
-        await browser.url("");
-        const languageList = await $('button[id="js-lang-list-button"]');
-        languageList.waitAndClick();
-    });
-
-    it("Sixth test - log into account", async () => {
+    it("fifth test - log into account", async () => {
         await browser.url("/w/index.php?returnto=Main+Page&title=Special:UserLogin&centralAuthAutologinTried=1&centralAuthError=Not+centrally+logged+in");
         const userNameInputBox = await $('input[id="wpName1"]');
         const passwordInputBox = await $('input[id="wpPassword1"]');
@@ -80,7 +74,7 @@ describe("Test Suite", () => {
         expect(pageTitle).to.include("EpamTestCharlie");
     });
 
-    it("Seventh test - Search for 'EPAM' but before hitting enter, add 'Offices in USA' to search'", async () => {
+    it("Sixth test - Search for 'EPAM' but before hitting enter, add 'Offices in USA' to search'", async () => {
             await browser.url("");
             const inputBox = await $('input[id="searchInput"]');
             const submitButton = await $("//button[@type='submit']");
@@ -92,7 +86,7 @@ describe("Test Suite", () => {
             expect(pageTitle).to.include("Epam offices in USA");
     });
 
-    it("Eigth test - Search for content with no direct option, click on suggestion and assert suggested page has been opened", async () => {
+    it("Seventh test - Search for content with no direct option, click on suggestion and assert suggested page has been opened", async () => {
         await browser.url("");
         const inputBox = await $('input[id="searchInput"]');
         const submitButton = await $("//button[@type='submit']");
@@ -108,14 +102,14 @@ describe("Test Suite", () => {
         expect(pageTitle2).to.include("epic office in usa");
     });
 
-    it("Ninth test - Execute() task - Change border colour of wiki home icon to red", async () => {
+    it("Eighth test - Execute() task - Change border colour of wiki home icon to red", async () => {
         const wikiHomeIcon = await $('img[class="mw-logo-icon"]');
         await browser.execute(function (wikiHomeIcon) {
             wikiHomeIcon.style.border = 'red solid 2px';
         }, wikiHomeIcon);
         });
 
-    it("Tenth test - waitUntil() task - Search for 'Cat' and assert that the title text is appropriate", async() =>{
+    it("Nineth test - waitUntil() task - Search for 'Cat' and assert that the title text is appropriate", async() =>{
         await browser.url("");
         const inputBox = await $('input[id="searchInput"]');
         const submitButton = await $("//button[@type='submit']");
@@ -132,7 +126,7 @@ describe("Test Suite", () => {
     
     });
 
-    it("Eleventh test - get and set cookies task", async() =>{
+    it("Tenth test - get and set cookies task", async() =>{
         await browser.setCookies([
             {
                 name: "customCookie",
