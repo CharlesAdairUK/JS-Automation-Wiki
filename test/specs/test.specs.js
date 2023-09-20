@@ -58,7 +58,7 @@ describe("Test Suite", () => {
         expect (languageList).to.exist;
     });
 
-    it("fifth test - log into account", async () => {
+    it("Fifth test - log into account", async () => {
         await browser.url("/w/index.php?returnto=Main+Page&title=Special:UserLogin&centralAuthAutologinTried=1&centralAuthError=Not+centrally+logged+in");
         const userNameInputBox = await $('input[id="wpName1"]');
         const passwordInputBox = await $('input[id="wpPassword1"]');
@@ -123,7 +123,6 @@ describe("Test Suite", () => {
                 timeoutMsg: "Title was not loaded"
             }
         )
-    
     });
 
     it("Tenth test - get and set cookies task", async() =>{
@@ -137,5 +136,4 @@ describe("Test Suite", () => {
         console.log("cookie value");
         console.dir(cookie);
     });
-
 });

@@ -1,3 +1,7 @@
+const {
+  existsSync,
+  mkdirSync
+} = require("fs");
 exports.config = {
    
     //
@@ -56,6 +60,11 @@ exports.config = {
         maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true
+    },
+    {
+        maxInstances: 1,
+        browserName: "firefox",
+        acceptInsecureCerts: true
     }],
 
     //
@@ -105,7 +114,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],
+     services: ['chromedriver', 'geckodriver'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -127,7 +136,22 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec', ["junit", { 
+      outputDir: "./report",
+      outputFileFormat: function (options) {
+        return 'results-${options.cid}.xml';
+      },
+    }], ['allure', {
+
+      outputDir: 'allure-results',
+
+      disableWebdriverStepsReporting: true,
+
+      disableWebdriverScreenshotsReporting: true,
+
+      }
+
+    ]],
 
     
     //
@@ -305,6 +329,11 @@ exports.config = {
      */
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
+
+
+
+
+
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
