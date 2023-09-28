@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint ./ --fix",
     "allure:open": "allure generate allure-results && allure open",
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./configs/wdio.conf.js"
   },
   "keywords": [],
   "author": "Charles Adair",
