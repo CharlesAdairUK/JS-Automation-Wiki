@@ -1,10 +1,15 @@
-class SearchResultsBodyContentComponent {
-    get rootEl() {
-        return $('div[id="bodyContent"]');
+const BaseComponent = require('../common/basecomponent.component');
+
+class SearchResultsBodyContentComponent extends BaseComponent {
+    constructor() {
+        super('div[id="bodyContent"]');
     }
 
-    get searchDYMbtn() {
-        return this.rootEl.$('a[id="mw-search-DYM-suggestion"]');
+    data(type) {
+        const selectors = {
+            searchDYMbtn: 'a[id="mw-search-DYM-suggestion"]',
+        };
+        return this.rootEl.$(selectors[type]);
     }
 }
 

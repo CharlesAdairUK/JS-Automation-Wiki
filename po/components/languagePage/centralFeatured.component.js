@@ -1,10 +1,15 @@
-class CentralFeaturedComponent {
-    get rootEl() {
-        return $('div[class="central-featured"]');
+const BaseComponent = require('../common/basecomponent.component');
+
+class CentralFeaturedComponent extends BaseComponent {
+    constructor() {
+        super('div[class="central-featured"]');
     }
 
-    get germanBtn() {
-        return this.rootEl.$('a[id="js-link-box-de"]');
+    data(type) {
+        const selectors = {
+            germanBtn: 'a[id="js-link-box-de"]',
+        };
+        return this.rootEl.$(selectors[type]);
     }
 }
 

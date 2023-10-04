@@ -1,14 +1,16 @@
-class LangListDropComponent {
-    get rootEl() {
-        return $('div[id="js-lang-lists"]');
+const BaseComponent = require('../common/basecomponent.component');
+
+class LangListDropComponent extends BaseComponent {
+    constructor() {
+        super('div[id="js-lang-lists"]');
     }
 
-    get langDropBtn() {
-        return $('button[id="js-lang-list-button"]');
-    }
-
-    get langDropContent() {
-        return this.rootEl.$('div[id="js-lang-lists"]');
+    data(type) {
+        const selectors = {
+            langDropBtn: 'button[id="js-lang-list-button"]',
+            langDropContent: 'div[id="js-lang-lists"]',
+        };
+        return this.rootEl.$(selectors[type]);
     }
 }
 

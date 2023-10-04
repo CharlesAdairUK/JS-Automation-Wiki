@@ -1,39 +1,62 @@
-class HeaderComponent {
-    get rootEl() {
-        return $('.vector-header');
+const BaseComponent = require('./basecomponent.component');
+
+class HeaderComponent extends BaseComponent {
+    constructor() {
+        super('.vector-header');
     }
 
-    get hamburgerMenuBtn() {
-        return this.rootEl.$('.vector-main-menu-landmark');
+    data(type) {
+        const selectors = {
+            hamburgerMenuBtn: '.vector-main-menu-landmark',
+            wikiHomeIcon: 'img[class="mw-logo-icon"]',
+            searchInputBox: 'input[name="search"]',
+            searchSubmitBtn: 'button[class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button"]',
+            // searchSubtmitBtn: 'button[class=".cdx-button.cdx-search-input__end-button');
+            createAccountBtn: 'li[id="pt-createaccount-2"]',
+            loginBtn: 'li[id="pt-login-2"]',
+            optionsBtn: '.vector-user-links-dropdownpt-anonuserpage',
+            loggedInUserNameBtn: 'li[id="pt-userpage-2"]',
+        };
+        return this.rootEl.$(selectors[type]);
     }
 
-    get wikiHomeIcon() {
-        return this.rootEl.$('img[class="mw-logo-icon"]');
-    }
+    // get rootEl() {
+    //     return $('.vector-header');
+    // }
 
-    get searchInputBox() {
-        return this.rootEl.$('input[name="search"]');
-    }
+    // get hamburgerMenuBtn() {
+    //     return this.hamburgerMenuBtn
+    // }
 
-    get searchSubmitBtn() {
-        return this.rootEl.$('button[class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button"]');
-    }
+    // get wikiHomeIcon() {
+    //     return this.rootEl.$('img[class="mw-logo-icon"]');
+    // }
 
-    get createAccountBtn() {
-        return this.rootEl.$('li[id="pt-createaccount-2"]');
-    }
+    // get searchInputBox() {
+    //     return this.rootEl.$('input[name="search"]');
+    // }
 
-    get loginBtn() {
-        return this.rootEl.$('li[id="pt-login-2"]');
-    }
+    // get searchSubmitBtn() {
+    //     this.rootEl.$('button[class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button"]');
+    //     // return this.rootEl.$('//button[text()="Search"]');
+    //     return this.rootEl.$('button').$('Search');
+    // }
 
-    get optionsBtn() {
-        return this.rootEl.$('.vector-user-links-dropdownpt-anonuserpage');
-    }
+    // get createAccountBtn() {
+    //     return this.rootEl.$('li[id="pt-createaccount-2"]');
+    // }
 
-    get loggedInUserNameBtn() {
-        return this.rootEl.$('li[id="pt-userpage-2"]');
-    }
+    // get loginBtn() {
+    //     return this.rootEl.$('li[id="pt-login-2"]');
+    // }
+
+    // get optionsBtn() {
+    //     return this.rootEl.$('.vector-user-links-dropdownpt-anonuserpage');
+    // }
+
+    // get loggedInUserNameBtn() {
+    //     return this.rootEl.$('li[id="pt-userpage-2"]');
+    // }
 }
 
 module.exports = HeaderComponent;

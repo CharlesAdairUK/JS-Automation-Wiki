@@ -1,34 +1,21 @@
-class UserLoginFormComponent {
-    get rootEl() {
-        return $('div[id="userloginForm"]');
+const BaseComponent = require('../common/basecomponent.component');
+
+class UserLoginFormComponent extends BaseComponent {
+    constructor() {
+        super('div[id="userloginForm"]');
     }
 
-    get usernameInputBox() {
-        return this.rootEl.$('input[id="wpName1"]');
-    }
-
-    get passwordInputBox() {
-        return this.rootEl.$('input[id="wpPassword1"]');
-    }
-
-    get rememberMeCheckbox() {
-        return this.rootEl.$('input[name="wpRemember"]');
-    }
-
-    get loginSubmitBtn() {
-        return this.rootEl.$('//button[@type=\'submit\']');
-    }
-
-    get helpBtn() {
-        return this.rootEl.$('a[href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Logging_in"]');
-    }
-
-    get forgotPasswordBtn() {
-        return this.rootEl.$('a[href="/wiki/Special:PasswordReset"]');
-    }
-
-    get joinWikipediaBtn() {
-        return this.rootEl.$('a[id="mw-createaccount-join"]');
+    data(type) {
+        const selectors = {
+            passwordInputBox: 'input[id="wpPassword1"]',
+            usernameInputBox: 'input[id="wpName1"]',
+            rememberMeCheckbox: 'input[name="wpRemember"]',
+            loginSubmitBtn: '//button[@type=\'submit\']',
+            helpBtn: 'a[href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Logging_in"]',
+            forgotPasswordBtn: 'a[href="/wiki/Special:PasswordReset"]',
+            joinWikipediaBtn: 'a[id="mw-createaccount-join"]',
+        };
+        return this.rootEl.$(selectors[type]);
     }
 }
 

@@ -1,16 +1,10 @@
+const BasePage = require('./BasePage');
 const HeaderComponent = require('../components/common/header.component');
 
-class HomePage {
+class HomePage extends BasePage {
     constructor() {
+        super('');
         this.headerComponent = new HeaderComponent();
-    }
-
-    async open() {
-        await browser.url('');
-    }
-
-    async getPageTitle() {
-        return await browser.getTitle();
     }
 }
 
