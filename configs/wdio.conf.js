@@ -24,7 +24,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        'test/specs/**/*.js', // ToDo: define location for spec files here
+        '../test/specs/**/*.js', // ToDo: define location for spec files here
     // 'C:/Users/Charles_Adair/Documents/Automation-js-mentioring/test/specs/**/*.js'
     ],
     // Patterns to exclude.
@@ -97,7 +97,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://www.wikipedia.org/',
+    baseUrl: 'https://en.wikipedia.org/wiki/Main_Page',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
