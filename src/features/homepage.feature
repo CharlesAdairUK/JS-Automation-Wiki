@@ -1,6 +1,9 @@
+@wikiTestSuite
 Feature: Homepage
 
-Scenario: 'Get Homepage Title'
-    Given I open "Homepage" page
-    Then Page title should be equal to "Wikipedia, the free encyclopedia"
+    @homeTitle
+    Scenario: Get Homepage Title
+        When I open "Homepage" page
+        Then Page title should "be equal to" "Wikipedia, the free encyclopedia"
+
     
