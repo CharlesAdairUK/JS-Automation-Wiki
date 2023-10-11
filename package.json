@@ -135,9 +135,7 @@
     "escape-html": "^1.0.3",
     "escape-string-regexp": "^4.0.0",
     "escodegen": "^2.1.0",
-    "eslint": "^8.46.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-google": "^0.14.0",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-module-utils": "^2.8.0",
     "eslint-plugin-import": "^2.28.0",
@@ -391,7 +389,6 @@
     "pinkie": "^2.0.4",
     "pinkie-promise": "^2.0.1",
     "prelude-ls": "^1.2.1",
-    "prettier": "^3.0.3",
     "pretty-format": "^29.6.3",
     "pretty-ms": "^7.0.1",
     "process-nextick-args": "^2.0.1",
@@ -555,10 +552,13 @@
     "@wdio/cucumber-framework": "^8.16.19",
     "@wdio/local-runner": "^8.16.20",
     "@wdio/spec-reporter": "^8.16.17",
-    "mocha": "^10.2.0"
+    "eslint": "^8.51.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^10.2.0",
+    "prettier": "3.0.3"
   },
   "scripts": {
-    "test": "mocha",
+    "lint": "eslint --fix .",
     "wdio": "wdio run ./src/configs/wdio.conf.js"
   },
   "repository": {

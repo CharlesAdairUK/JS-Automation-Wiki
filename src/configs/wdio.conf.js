@@ -22,11 +22,11 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        '../features/**/*.feature'
+        '../features/**/*.feature',
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+    // 'path/to/excluded/files'
     ],
     //
     // ============
@@ -51,7 +51,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
     }],
 
     //
@@ -128,7 +128,7 @@ exports.config = {
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        // <string[]> (file/dir) require files before executing features
+    // <string[]> (file/dir) require files before executing features
         require: ['./src/step-definitions/*steps.js', './src/step-definitions/hooks.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
@@ -149,9 +149,9 @@ exports.config = {
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
-        ignoreUndefinedDefinitions: false
+        ignoreUndefinedDefinitions: false,
     },
-    
+
     //
     // =====
     // Hooks
@@ -272,7 +272,7 @@ exports.config = {
      */
     // afterFeature: function (uri, feature) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {string} commandName hook command name
@@ -316,4 +316,4 @@ exports.config = {
     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
-}
+};
