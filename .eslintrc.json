@@ -1,0 +1,22 @@
+/* globals describe, expect, it */ 
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "class-methods-use-this": "off",
+        "arrow-parens": "off",
+        "prefer-arrow-callback": "off",
+        "func-names": "off",
+        "object-curly-newline": "off",
+        "max-len": ["error", { "code": 160, "tabWidth": 4 }],
+        "require-jsdoc": 0,
+        "linebreak-style": 0,
+        "indent": ["error", 4]
+    }
+}
