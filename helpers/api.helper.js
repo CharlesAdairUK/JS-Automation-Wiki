@@ -5,7 +5,7 @@ const sendRequest = async (url, data = null, method = "GET") => {
     try{
         const response = await axios({
             method,
-            url: `${TEST_URL}/${url}`, 
+            url: `${TEST_URL}/${url}`,
             headers: {},
             method,
             data
