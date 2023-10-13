@@ -10,7 +10,7 @@ BDD Tests:
     - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox
   script: 
     - echo "This job BDD Tests"
-    - npm install -global wdio cucumber
+    - npm install -global wdio @wdio/cli cucumber
     - npm run wdio
 
 deploy-prod:
