@@ -9,17 +9,15 @@ Unit Tests:
     - echo "This job tests something"
 
 UI Tests:
-stages: 
-  - test 
-image: node:18.16.0-alpine 
-before_script: 
-  - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox
+  stage: test
+  image: node:18.16.0-alpine
+  before_script:
+    - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox
 
 BDD Tests:
-stage: test
-script: 
-  - echo "This job BDD Tests"
-
+  stage: test
+  script: 
+    - echo "This job BDD Tests"
 
 deploy-prod:
   stage: deploy
