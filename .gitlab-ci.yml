@@ -7,7 +7,7 @@ API Tests:
   stage: test
   script:
     - echo "This job tests APIs"
-    - npm run test
+    - "npm run test"
 
 
 deploy-prod:
