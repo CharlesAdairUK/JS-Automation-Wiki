@@ -7,9 +7,21 @@ BDD Tests:
   stage: test
   image: node:18.16.0-alpine
   before_script:
-    - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox chromium chromium-chromedriver
-  script: 
-    - echo "This job BDD Tests"
+        - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox xvfb chromium chromium-chromedriver
+        - export DISPLAY=:99
+        - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+      script: 
+        - export DISPLAY=:99
+        - npm install --save-dev @wdio/local-runner
+        - npm install -global wdio @wdio/cli cucumber chromedriver geckodriver
+        - npm run wdio
+
+    deploy-prod:
+      stage: deploy
+      script:
+        - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+      environment: production
+        - echo "This job BDD Tests"
     - npm install --save-dev @wdio/local-runner
     - npm install -global wdio @wdio/cli cucumber chromedriver geckodriver
     - npm run wdio
