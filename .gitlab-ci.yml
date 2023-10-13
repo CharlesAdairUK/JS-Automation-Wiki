@@ -8,7 +8,7 @@ API Tests:
   image: node:18.16.0-alpine
   script:
     - echo "This job tests APIs"
-    - npm install --global mocha chai eslint axios mochawesome prettier
+    - npm install --global mocha chai eslint mochawesome prettier
     - npm run test
 
 
