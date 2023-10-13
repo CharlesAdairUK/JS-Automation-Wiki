@@ -1,0 +1,8 @@
+Unit Tests:
+  stage: test
+  image: node:18.16.0-alpine
+  script:
+    - echo "This job tests APIs"
+    - npm install axios --save
+    - npm install --global mocha chai eslint mochawesome prettier
+    - npm run test
