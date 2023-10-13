@@ -5,7 +5,7 @@ build-job:
 
 API Tests:
   stage: test
-  image: node:18.16.0-alpine 
+  image: node:18.16.0-alpine
   script:
     - echo "This job tests APIs"
     - npm run test
