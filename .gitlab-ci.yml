@@ -16,12 +16,12 @@ BDD Tests:
     - npm install -global wdio @wdio/cli cucumber chromedriver geckodriver
     - npm run wdio
 
-deploy-prod:
+deployment:
   stage: deploy
   script:
     - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
-  environment: production
     - echo "This job BDD Tests"
     - npm install --save-dev @wdio/local-runner
     - npm install -global wdio @wdio/cli cucumber chromedriver geckodriver
     - npm run wdio
+  environment: production
