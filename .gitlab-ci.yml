@@ -3,7 +3,7 @@ build-job:
   script:
     - echo "Hello, $GITLAB_USER_LOGIN!"
 
-test-job1:
+Unit Tests:
   stage: test
   script:
     - echo "This job tests something"
