@@ -11,7 +11,7 @@ BDD Tests:
   script: 
     - echo "This job BDD Tests"
     - npm install --save-dev @wdio/local-runner
-    - npm install -global wdio @wdio/cli cucumber
+    - npm install -global wdio @wdio/cli cucumber chromedriver geckodriver
     - npm run wdio
 
 deploy-prod:
