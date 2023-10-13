@@ -51,7 +51,7 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'geckodriver',
+        browserName: 'firefox',
     }],
 
     //
