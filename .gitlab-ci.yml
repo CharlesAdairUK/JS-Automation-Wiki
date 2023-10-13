@@ -6,7 +6,7 @@ build-job:
 BDD Tests:
   stage: test
   image: node:18.16.0-alpine
-    before_script:
+  before_script:
     - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox
   script: 
     - echo "This job BDD Tests"
