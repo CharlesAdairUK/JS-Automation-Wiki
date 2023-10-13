@@ -1,6 +1,5 @@
 {
   "name": "automation-js-mentoring",
-  
   "version": "1.0.0",
   "description": "Unit tests",
   "main": "index.js",
@@ -24,7 +23,7 @@
   },
   "dependencies": {
     "c8": "^8.0.1",
-    "chai": "^4.3.7",
+    "chai": "^4.3.10",
     "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "mochawesome": "^7.1.3"
