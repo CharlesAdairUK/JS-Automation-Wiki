@@ -13,7 +13,7 @@ BDD Tests:
   artifacts:
     when: always
     paths:
-      - ./mochawesome-report
+      - ./report
     reports: 
-      junit: ./mochawesome-report/mochawesome.json
+      junit: ./report/results.xml
     expire_in: 1 week
