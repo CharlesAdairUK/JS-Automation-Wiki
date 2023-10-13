@@ -5,13 +5,12 @@ Unit Tests:
     - echo "This job tests APIs"
     - npm install -global mocha c8 mochawesome prettier
     - npm install chai 
-    - npm install @wdio/junit-reporter
     - npm run test
   artifacts:
     when: always
     paths:
-      - ./report
-    reports: 
-      junit: ./mochawesome-report/mochawesome.json
+      - ./mochawesome-report/
+    reports:
+      mochawesome: ./mochawesome-report/mochawesome.json
     expire_in: 1 week
 
