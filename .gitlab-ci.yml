@@ -3,5 +3,6 @@ Unit Tests:
   image: node:18.16.0-alpine
   script:
     - echo "This job tests APIs"
-    - npm install -global mocha chai c8 mochawesome prettier
+    - npm install -global mocha c8 mochawesome prettier
+    - npm install chai # Add this line to install chai
     - npm run test
