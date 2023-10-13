@@ -1,0 +1,22 @@
+build-job:
+  stage: build
+  script:
+    - echo "Hello, $GITLAB_USER_LOGIN!"
+
+UI Tests:
+ variables: 
+    REPO_NAME: https://git.epam.com/charles_adair/automation-js/-/tree/ui-tests
+  stage: test
+  image: node:18.16.0-alpine
+  before_script:
+    - apk add --no-cache sudo curl build-base g++ libpng libpng-dev jpeg-dev pango-dev cairo-dev giflib-dev python3 firefox
+  script: 
+    - echo "This job UI Tests"
+    - npm run wdio
+
+
+deploy-prod:
+  stage: deploy
+  script:
+    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+  environment: production
