@@ -1,16 +1,17 @@
-Unit Tests:
+
+API Tests:
   stage: test
   image: node:18.16.0-alpine
   script:
     - echo "This job tests APIs"
-    - npm install -global mocha c8 mochawesome prettier
-    - npm install chai 
+    - npm install axios --save
+    - npm install --global mocha chai eslint mochawesome prettier
     - npm run test
+
   artifacts:
     when: always
     paths:
-      - ./mochawesome-report/
-    reports:
-      mochawesome: ./mochawesome-report/mochawesome.json
+      - ./reports
+    reports: 
+     junit: ./reports/results.xml
     expire_in: 1 week
-
