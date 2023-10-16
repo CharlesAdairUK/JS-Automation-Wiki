@@ -7,8 +7,7 @@ UI Tests:
     - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   script: 
     - export DISPLAY=:99
-    - npm install --save-dev @wdio/local-runner
-    - npm install -global wdio @wdio/cli cucumber  geckodriver
+    - npm install
     - npm run wdio
   artifacts:
     when: always
