@@ -141,8 +141,8 @@ exports.config = {
             'junit',
             {
                 outputDir: './report',
-                outputFileFormat(options) {
-                    return 'results-${options.cid}.xml';
+                outputFileFormat() {
+                    return 'results.xml';
                 },
             },
         ],
