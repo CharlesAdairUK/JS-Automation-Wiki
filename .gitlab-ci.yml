@@ -11,8 +11,8 @@ API Tests:
   artifacts:
     when: always
     paths:
-      - ./report
+      - ./reports
     reports: 
-     mochawesome: /mochawesome-report/mochawesome.json
+     junit: ./reports/results.xml
     expire_in: 1 week
 
