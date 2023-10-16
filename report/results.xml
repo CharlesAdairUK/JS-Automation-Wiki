@@ -1,344 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Test Suite" timestamp="2023-10-16T15:09:38" time="39.833" tests="10" failures="3" errors="3" skipped="0">
+  <testsuite name="Test Suite" timestamp="2023-10-16T16:53:58" time="31.336" tests="9" failures="1" errors="1" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Test Suite"/>
       <property name="capabilities" value="firefox.118_0_2.windows"/>
       <property name="file" value="file:///C:/Users/Charles_Adair/Documents/Automation-js-mentoring/test/specs/test.specs.js"/>
     </properties>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Get Homepage Title" time="1.155">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Get Homepage Title" time="1.624">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Search for EPAM" time="2.177">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Search for EPAM" time="3.086">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/07322a36-da60-4843-8b6a-e20824008858/element - {"using":"css selector","value":"input[name=\"search\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ff4253f4-4ea2-4d38-a705-d9c96d6a8695/element - {"using":"css selector","value":"input[name=\"search\"]"}
 RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/4f14cd8c-2422-400c-b49b-fadc8c7cbdde/clear - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/6e1ff785-be83-4ec6-a6aa-5bda623ec2b2/clear - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/4f14cd8c-2422-400c-b49b-fadc8c7cbdde/value - {"text":"Epam"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/6e1ff785-be83-4ec6-a6aa-5bda623ec2b2/value - {"text":"Epam"}
 RESULT: {"text":"Epam"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/07322a36-da60-4843-8b6a-e20824008858/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ff4253f4-4ea2-4d38-a705-d9c96d6a8695/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/07322a36-da60-4843-8b6a-e20824008858/elements - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ff4253f4-4ea2-4d38-a705-d9c96d6a8695/elements - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/07322a36-da60-4843-8b6a-e20824008858/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ff4253f4-4ea2-4d38-a705-d9c96d6a8695/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/04a53389-6eef-4b71-ae28-54b7f4e06e2f/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7f50e5e8-7959-468d-8abb-927764ac939b/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/04a53389-6eef-4b71-ae28-54b7f4e06e2f/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7f50e5e8-7959-468d-8abb-927764ac939b/click - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Change language of website" time="1.437">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Change language of website" time="2.191">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://www.wikipedia.org/"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://www.wikipedia.org/"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"url":"https://www.wikipedia.org/"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":"div[class=\"central-featured\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[class=\"central-featured\"]"}
 RESULT: {"using":"css selector","value":"div[class=\"central-featured\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/ff33b425-7c28-4e7d-bf6b-de6543c12d14/element - {"using":"css selector","value":"a[id=\"js-link-box-de\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/345f6b96-9cb9-48c7-9afc-8a7335435d8f/element - {"using":"css selector","value":"a[id=\"js-link-box-de\"]"}
 RESULT: {"using":"css selector","value":"a[id=\"js-link-box-de\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/08de2e02-2d2e-4488-be92-ced0c08d688f/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/00e25e5b-3497-4a44-8b55-d038b451af03/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/08de2e02-2d2e-4488-be92-ced0c08d688f/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/00e25e5b-3497-4a44-8b55-d038b451af03/click - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Ensure language dropdown list appears" time="10.728">
-      <failure/>
-      <error message="Can't call waitAndClick on element with selector &quot;button[id=&quot;js-lang-list-button&quot;]&quot; because element wasn't found"/>
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Ensure language dropdown list appears" time="1.047">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://www.wikipedia.org/"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://www.wikipedia.org/"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"url":"https://www.wikipedia.org/"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":"div[id=\"js-lang-lists\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[class=\"lang-list-button-wrapper\"]"}
+RESULT: {"using":"css selector","value":"div[class=\"lang-list-button-wrapper\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/cf9da0eb-7671-43b2-820c-8be4f522dbfe/element - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
+RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/724f7cba-28f2-419f-8863-ff88419cc7b6/displayed - {}
+RESULT: {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/724f7cba-28f2-419f-8863-ff88419cc7b6/click - {}
+RESULT: {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[class=\"lang-list-button-wrapper\"]"}
+RESULT: {"using":"css selector","value":"div[class=\"lang-list-button-wrapper\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/cf9da0eb-7671-43b2-820c-8be4f522dbfe/element - {"using":"css selector","value":"div[id=\"js-lang-lists\"]"}
 RESULT: {"using":"css selector","value":"div[id=\"js-lang-lists\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/element - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8d609aec-d4c3-41ae-8989-73f67c6b8ef7/elements - {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-RESULT: {"using":"css selector","value":"button[id=\"js-lang-list-button\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/screenshot - {}
-RESULT: {}
 ]]></system-out>
-      <system-err><![CDATA[
-Error: Can't call waitAndClick on element with selector "button[id="js-lang-list-button"]" because element wasn't found
-    at async Context.<anonymous> (C:\Users\Charles_Adair\Documents\Automation-js-mentoring\test\specs\test.specs.js:32:9)
-]]></system-err>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Log into account" time="4.653">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Log into account" time="4.911">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/61379161-3ec4-49ba-b84f-d0dd11c53e54/element - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/291e7ad1-a1e9-44c0-b381-9b6aaabd5d79/element - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/c8a524e7-9118-48e1-997f-891c29432487/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/0c78b841-c9c7-4fef-a443-c0c9a669bdcf/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/c8a524e7-9118-48e1-997f-891c29432487/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/0c78b841-c9c7-4fef-a443-c0c9a669bdcf/click - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
 RESULT: {"using":"css selector","value":"div[id=\"userloginForm\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8b70a46b-80bf-4dba-8c54-40184b9a4519/element - {"using":"css selector","value":"input[id=\"wpName1\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/36569035-5014-4156-9aaf-a382890e6bf1/element - {"using":"css selector","value":"input[id=\"wpName1\"]"}
 RESULT: {"using":"css selector","value":"input[id=\"wpName1\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/a2974ee2-2086-4222-8062-595a6cec8a32/clear - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/19ac76b5-4f17-4802-879b-a39ca1309cd9/clear - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/a2974ee2-2086-4222-8062-595a6cec8a32/value - {"text":"EpamTestCharlie"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/19ac76b5-4f17-4802-879b-a39ca1309cd9/value - {"text":"EpamTestCharlie"}
 RESULT: {"text":"EpamTestCharlie"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
 RESULT: {"using":"css selector","value":"div[id=\"userloginForm\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8b70a46b-80bf-4dba-8c54-40184b9a4519/element - {"using":"css selector","value":"input[id=\"wpPassword1\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/36569035-5014-4156-9aaf-a382890e6bf1/element - {"using":"css selector","value":"input[id=\"wpPassword1\"]"}
 RESULT: {"using":"css selector","value":"input[id=\"wpPassword1\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/b1ab0ef1-2d34-466f-87a7-af49c5a7dad3/clear - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/fd4cb1a3-a62b-4c03-b9d7-4617262f4d27/clear - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/b1ab0ef1-2d34-466f-87a7-af49c5a7dad3/value - {"text":"Tsotester123"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/fd4cb1a3-a62b-4c03-b9d7-4617262f4d27/value - {"text":"Tsotester123"}
 RESULT: {"text":"Tsotester123"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":"div[id=\"userloginForm\"]"}
 RESULT: {"using":"css selector","value":"div[id=\"userloginForm\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/8b70a46b-80bf-4dba-8c54-40184b9a4519/element - {"using":"xpath","value":"//button[@type='submit']"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/36569035-5014-4156-9aaf-a382890e6bf1/element - {"using":"xpath","value":"//button[@type='submit']"}
 RESULT: {"using":"xpath","value":"//button[@type='submit']"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/bcbc22ef-d6b9-43b3-bbc2-e229ba355244/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7faea181-cffe-4e37-9b99-ece0156209ce/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/bcbc22ef-d6b9-43b3-bbc2-e229ba355244/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7faea181-cffe-4e37-9b99-ece0156209ce/click - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/d87fd9a9-3940-49f6-8d5b-4d62d0d65e17/element - {"using":"css selector","value":"li[id=\"pt-userpage-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ba8de363-c3cc-4c66-8caa-d9db043b2d8e/element - {"using":"css selector","value":"li[id=\"pt-userpage-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-userpage-2\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/4b515d7a-8f38-4241-8b94-54e1faf096f2/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7f98b449-5801-4c0b-ab9e-a6f516489127/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/4b515d7a-8f38-4241-8b94-54e1faf096f2/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/7f98b449-5801-4c0b-ab9e-a6f516489127/click - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Search for EPAM but before hitting enter add Offices in USA to search" time="2.584">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Search for EPAM but before hitting enter add Offices in USA to search" time="2.829">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/121589c8-7030-4815-bb2c-0ec612ec25d7/element - {"using":"css selector","value":"input[name=\"search\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/43944c59-8a22-4d25-91d6-bd64b67e7bef/element - {"using":"css selector","value":"input[name=\"search\"]"}
 RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/a211f72f-78a2-4bc2-9bf2-12835308beed/clear - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ef81ba87-7448-46d8-948a-212a1c39999d/clear - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/a211f72f-78a2-4bc2-9bf2-12835308beed/value - {"text":"Epam"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/ef81ba87-7448-46d8-948a-212a1c39999d/value - {"text":"Epam"}
 RESULT: {"text":"Epam"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/121589c8-7030-4815-bb2c-0ec612ec25d7/element - {"using":"css selector","value":"input[name=\"search\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/43944c59-8a22-4d25-91d6-bd64b67e7bef/element - {"using":"css selector","value":"input[name=\"search\"]"}
 RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/a211f72f-78a2-4bc2-9bf2-12835308beed/value - {"text":" offices in USA"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/5c7e4c1b-eeab-43e9-937c-a7d774d87c95/value - {"text":" offices in USA"}
 RESULT: {"text":" offices in USA"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/121589c8-7030-4815-bb2c-0ec612ec25d7/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/43944c59-8a22-4d25-91d6-bd64b67e7bef/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/d2ed6ae5-c984-4e72-90b1-486330b01b04/displayed - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/3d3acfc5-4202-4db7-8744-226b0ff3a2a5/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/d2ed6ae5-c984-4e72-90b1-486330b01b04/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/3d3acfc5-4202-4db7-8744-226b0ff3a2a5/click - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Search for content with no direct option click on suggestion and assert suggested page has been opened" time="2.321">
-      <failure/>
-      <error message="Cannot read properties of undefined (reading 'data')"/>
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Execute task Change border colour of wiki home icon to red" time="0.96">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/23c8724c-6ea3-4740-b5e8-68ac7d8bc338/element - {"using":"css selector","value":"input[name=\"search\"]"}
-RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/75b80c7a-0f73-4ee9-ac64-d2a9ac44afca/clear - {}
-RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/75b80c7a-0f73-4ee9-ac64-d2a9ac44afca/value - {"text":"Epam"}
-RESULT: {"text":"Epam"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
-RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/23c8724c-6ea3-4740-b5e8-68ac7d8bc338/element - {"using":"css selector","value":"input[name=\"search\"]"}
-RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/75b80c7a-0f73-4ee9-ac64-d2a9ac44afca/value - {"text":" offices in USA"}
-RESULT: {"text":" offices in USA"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
-RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/23c8724c-6ea3-4740-b5e8-68ac7d8bc338/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/f20f186e-ef99-4720-a541-9a64eee76a3f/displayed - {}
-RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/f20f186e-ef99-4720-a541-9a64eee76a3f/click - {}
-RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
-RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/screenshot - {}
-RESULT: {}
-]]></system-out>
-      <system-err><![CDATA[
-TypeError: Cannot read properties of undefined (reading 'data')
-    at Context.<anonymous> (C:\Users\Charles_Adair\Documents\Automation-js-mentoring\test\specs\test.specs.js:61:74)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-]]></system-err>
-    </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Execute task Change border colour of wiki home icon to red" time="0.883">
-      <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
-RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/3118bb17-5256-4e7f-b1f1-eace592ee3d1/element - {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/dc03fa5e-9365-4d1c-9d3c-9e0008992e63/element - {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
 RESULT: {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/execute/sync - {"script":"return (function(wikiHomeIcon) {\r\n            wikiHomeIcon.style.border = 'red solid 2px';\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c22ae268-0b01-432b-8035-8b026d59c42b","ELEMENT":"c22ae268-0b01-432b-8035-8b026d59c42b"}]}
-RESULT: {"script":"return (function(wikiHomeIcon) {\r\n            wikiHomeIcon.style.border = 'red solid 2px';\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c22ae268-0b01-432b-8035-8b026d59c42b","ELEMENT":"c22ae268-0b01-432b-8035-8b026d59c42b"}]}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/execute/sync - {"script":"return (function(wikiHomeIcon) {\r\n            wikiHomeIcon.style.borderColor = 'rgb(255, 0, 0)';\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"863b051d-9a4e-48f4-961c-fb176b895629","ELEMENT":"863b051d-9a4e-48f4-961c-fb176b895629"}]}
+RESULT: {"script":"return (function(wikiHomeIcon) {\r\n            wikiHomeIcon.style.borderColor = 'rgb(255, 0, 0)';\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"863b051d-9a4e-48f4-961c-fb176b895629","ELEMENT":"863b051d-9a4e-48f4-961c-fb176b895629"}]}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/3118bb17-5256-4e7f-b1f1-eace592ee3d1/element - {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/dc03fa5e-9365-4d1c-9d3c-9e0008992e63/element - {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
 RESULT: {"using":"css selector","value":"img[class=\"mw-logo-icon\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/execute/sync - {"script":"return (function(updatedWikiHomeIcon) {\r\n            return window.getComputedStyle(updatedWikiHomeIcon).border;\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c22ae268-0b01-432b-8035-8b026d59c42b","ELEMENT":"c22ae268-0b01-432b-8035-8b026d59c42b"}]}
-RESULT: {"script":"return (function(updatedWikiHomeIcon) {\r\n            return window.getComputedStyle(updatedWikiHomeIcon).border;\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c22ae268-0b01-432b-8035-8b026d59c42b","ELEMENT":"c22ae268-0b01-432b-8035-8b026d59c42b"}]}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/execute/sync - {"script":"return (function(updatedWikiHomeIcon) {\r\n            return window.getComputedStyle(updatedWikiHomeIcon).borderColor;\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"863b051d-9a4e-48f4-961c-fb176b895629","ELEMENT":"863b051d-9a4e-48f4-961c-fb176b895629"}]}
+RESULT: {"script":"return (function(updatedWikiHomeIcon) {\r\n            return window.getComputedStyle(updatedWikiHomeIcon).borderColor;\r\n        }).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"863b051d-9a4e-48f4-961c-fb176b895629","ELEMENT":"863b051d-9a4e-48f4-961c-fb176b895629"}]}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="waitUntil task Search for Cat and assert that the title text is appropriate" time="2.798">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="waitUntil task Search for Cat and assert that the title text is appropriate" time="3.52">
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/9df530bf-1d03-42f5-b55c-17b4f28fb542/element - {"using":"css selector","value":"input[name=\"search\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/d5244e8e-7e4b-495b-bc82-8a250021dde7/element - {"using":"css selector","value":"input[name=\"search\"]"}
 RESULT: {"using":"css selector","value":"input[name=\"search\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/ce55e608-30b6-409e-9805-3c626d43921c/clear - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/26ddafc0-5657-4854-8029-0fd0ba85c98b/clear - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/ce55e608-30b6-409e-9805-3c626d43921c/value - {"text":"Cat"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/26ddafc0-5657-4854-8029-0fd0ba85c98b/value - {"text":"Cat"}
 RESULT: {"text":"Cat"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/9df530bf-1d03-42f5-b55c-17b4f28fb542/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/d5244e8e-7e4b-495b-bc82-8a250021dde7/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/9df530bf-1d03-42f5-b55c-17b4f28fb542/elements - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/d5244e8e-7e4b-495b-bc82-8a250021dde7/elements - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/9df530bf-1d03-42f5-b55c-17b4f28fb542/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/d5244e8e-7e4b-495b-bc82-8a250021dde7/elements - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
 RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/232ed942-d79b-447b-b759-96b860febc15/displayed - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/d5244e8e-7e4b-495b-bc82-8a250021dde7/element - {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+RESULT: {"using":"css selector","value":"button[class=\"cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button\"]"}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/0ea5eea5-d32e-49c3-bf79-078fe3854ef8/displayed - {}
 RESULT: {}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/232ed942-d79b-447b-b759-96b860febc15/click - {}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/0ea5eea5-d32e-49c3-bf79-078fe3854ef8/click - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/title - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/title - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Log in and log username as cookie Use getCookies to return value" time="11.065">
+    <testcase classname="firefox.118_0_2.windows.Test_Suite" name="Log in and log username as cookie Use getCookies to return value" time="11.141">
       <failure/>
       <error message="Can't call waitAndClick on element with selector &quot;li[id=&quot;pt-login-2&quot;]&quot; because element wasn't found"/>
       <system-out><![CDATA[
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element - {"using":"css selector","value":".vector-header"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/url - {"url":"https://en.wikipedia.org/wiki/Main_Page"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element - {"using":"css selector","value":".vector-header"}
 RESULT: {"url":"https://en.wikipedia.org/wiki/Main_Page"}
 RESULT: {"using":"css selector","value":".vector-header"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/element - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/element - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: POST /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/element/39ab159f-7ec6-4abb-a98c-3bbcc2c51636/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
+COMMAND: POST /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/element/e378ac29-9578-4986-b0f2-d654e11c5ee7/elements - {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
 RESULT: {"using":"css selector","value":"li[id=\"pt-login-2\"]"}
-COMMAND: GET /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc/screenshot - {}
+COMMAND: GET /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837/screenshot - {}
 RESULT: {}
-COMMAND: DELETE /session/a06c9c01-66ae-403e-aa91-82064e3d8bfc - {}
+COMMAND: DELETE /session/4a577ee9-d27f-4a8e-9f0a-ea5a83c2c837 - {}
 RESULT: {}
 ]]></system-out>
       <system-err><![CDATA[

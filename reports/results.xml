@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.174" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-10-16T15:06:47" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Test Suite to test the negative outcomes of POST/PUT/DELETE/GET" timestamp="2023-10-16T15:06:47" tests="4" file="C:\Users\Charles_Adair\Documents\Automation-js-mentoring\specs\negative.test.spec.js" time="0.567" failures="0">
+    <testcase name="API Test Suite to test the negative outcomes of POST/PUT/DELETE/GET GET - Testing the the retrieval of data from the posts folder that does not exist" time="0.139" classname="GET - Testing the the retrieval of data from the posts folder that does not exist">
+    </testcase>
+    <testcase name="API Test Suite to test the negative outcomes of POST/PUT/DELETE/GET POST - Testing the creation of a post with invalid data" time="0.045" classname="POST - Testing the creation of a post with invalid data">
+    </testcase>
+    <testcase name="API Test Suite to test the negative outcomes of POST/PUT/DELETE/GET PUT - Testing an edit of a post that does not exist" time="0.187" classname="PUT - Testing an edit of a post that does not exist">
+    </testcase>
+    <testcase name="API Test Suite to test the negative outcomes of POST/PUT/DELETE/GET DELETE - Testing the deletion of a post that does not exist" time="0.195" classname="DELETE - Testing the deletion of a post that does not exist">
+    </testcase>
+  </testsuite>
+  <testsuite name="API Test Suite to test the positive outcomes of POST/PUT/DELETE/GET" timestamp="2023-10-16T15:06:48" tests="4" file="C:\Users\Charles_Adair\Documents\Automation-js-mentoring\specs\positive.test.spec.js" time="0.606" failures="0">
+    <testcase name="API Test Suite to test the positive outcomes of POST/PUT/DELETE/GET GET - Retrieve post information from the first entry of the posts folder" time="0.034" classname="GET - Retrieve post information from the first entry of the posts folder">
+    </testcase>
+    <testcase name="API Test Suite to test the positive outcomes of POST/PUT/DELETE/GET POST - Create new post in the posts folder" time="0.188" classname="POST - Create new post in the posts folder">
+    </testcase>
+    <testcase name="API Test Suite to test the positive outcomes of POST/PUT/DELETE/GET PUT - Edit the first entry of the post folder using test data" time="0.192" classname="PUT - Edit the first entry of the post folder using test data">
+    </testcase>
+    <testcase name="API Test Suite to test the positive outcomes of POST/PUT/DELETE/GET DELETE - Delete the first entry of the posts folder" time="0.192" classname="DELETE - Delete the first entry of the posts folder">
+    </testcase>
+  </testsuite>
+</testsuites>

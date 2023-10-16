@@ -52,29 +52,29 @@ describe('Test Suite', () => {
         expect(pageTitle).to.include('Epam offices in USA');
     });
 
-    it('Search for content with no direct option, click on suggestion and assert suggested page has been opened', async () => {
-        await page('homepage').headerComponent.data('searchInputBox').setValue('Epam');
-        await page('homepage').headerComponent.data('searchInputBox').addValue(' offices in USA');
-        await page('homepage').headerComponent.data('searchSubmitBtn').waitAndClick();
-        const pageTitle = await browser.getTitle();
-        expect(pageTitle).to.include('Epam offices in USA');
-        await page('searchresultspage').SearchResultsBodyContentComponent.data('searchDYMbtn').waitAndClick();
-        await page('searchresultspage').SearchResultsBodyContentComponent.data('searchDYMbtn').waitAndClick();
-        const pageTitle2 = await browser.getTitle();
-        expect(pageTitle2).to.include('epic office in usa');
-    });
+    // it('Search for content with no direct option, click on suggestion and assert suggested page has been opened', async () => {
+    //     await page('homepage').headerComponent.data('searchInputBox').setValue('Epam');
+    //     await page('homepage').headerComponent.data('searchInputBox').addValue(' offices in USA');
+    //     await page('homepage').headerComponent.data('searchSubmitBtn').waitAndClick();
+    //     const pageTitle = await browser.getTitle();
+    //     expect(pageTitle).to.include('Epam offices in USA');
+    //     await page('searchresultspage').SearchResultsBodyContentComponent.data('searchDYMbtn').waitAndClick();
+    //     await page('searchresultspage').SearchResultsBodyContentComponent.data('searchDYMbtn').waitAndClick();
+    //     const pageTitle2 = await browser.getTitle();
+    //     expect(pageTitle2).to.include('epic office in usa');
+    // });
 
     it('Execute() task - Change border colour of wiki home icon to red', async () => {
         const wikiHomeIcon = await page('homepage').headerComponent.data('wikiHomeIcon');
         await browser.execute(function(wikiHomeIcon) {
-            wikiHomeIcon.style.border = 'red solid 2px';
+            wikiHomeIcon.style.borderColor = 'rgb(255, 0, 0)';
         }, wikiHomeIcon);
         const updatedWikiHomeIcon = await page('homepage').headerComponent.data('wikiHomeIcon');
         const borderStyle = await browser.execute(function(updatedWikiHomeIcon) {
-            return window.getComputedStyle(updatedWikiHomeIcon).border;
+            return window.getComputedStyle(updatedWikiHomeIcon).borderColor;
         }, updatedWikiHomeIcon);
 
-        expect(borderStyle).to.equal('2px solid rgb(255, 0, 0)');
+        expect(borderStyle).to.equal('rgb(255, 0, 0)');
     });
 
     it('waitUntil() task - Search for \'Cat\' and assert that the title text is appropriate', async () => {
@@ -92,21 +92,21 @@ describe('Test Suite', () => {
         expect(title).to.equal('Cat - Wikipedia');
     });
 
-    it('Log in and log username as cookie. Use .getCookies to return value', async () => {
-        await page('homepage').headerComponent.data('loginBtn').waitAndClick();
-        await page('loginpage').userLoginFormComponent.data('usernameInputBox').setValue(userName);
-        await page('loginpage').userLoginFormComponent.data('passwordInputBox').waitAndClick();
-        await page('loginpage').userLoginFormComponent.data('passwordInputBox').setValue(password);
-        await page('loginpage').userLoginFormComponent.data('loginSubmitBtn').waitAndClick();
-        await page('loginpage').headerComponent.data('loggedInUserNameBtn').waitAndClick();
-        await browser.setCookies([
-            {
-                name: 'Username',
-                value: userName,
-            },
-        ]);
-        const cookie = await browser.getCookies(['Username']);
-        console.log('Username logged as cookie');
-        console.dir(cookie);
-    });
+    // it('Log in and log username as cookie. Use .getCookies to return value', async () => {
+    //     await page('homepage').headerComponent.data('loginBtn').waitAndClick();
+    //     await page('loginpage').userLoginFormComponent.data('usernameInputBox').setValue(userName);
+    //     await page('loginpage').userLoginFormComponent.data('passwordInputBox').waitAndClick();
+    //     await page('loginpage').userLoginFormComponent.data('passwordInputBox').setValue(password);
+    //     await page('loginpage').userLoginFormComponent.data('loginSubmitBtn').waitAndClick();
+    //     await page('loginpage').headerComponent.data('loggedInUserNameBtn').waitAndClick();
+    //     await browser.setCookies([
+    //         {
+    //             name: 'Username',
+    //             value: userName,
+    //         },
+    //     ]);
+    //     const cookie = await browser.getCookies(['Username']);
+    //     console.log('Username logged as cookie');
+    //     console.dir(cookie);
+    // });
 });

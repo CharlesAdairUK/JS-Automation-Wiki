@@ -2,7 +2,7 @@ const BaseComponent = require('../common/basecomponent.component');
 
 class LangListDropComponent extends BaseComponent {
     constructor() {
-        super('div[id="js-lang-lists"]');
+        super('div[class="lang-list-button-wrapper"]');
     }
 
     data(type) {
