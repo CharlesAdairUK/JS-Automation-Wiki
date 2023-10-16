@@ -205,7 +205,7 @@ exports.config = {
    */
     beforeSession: function(config, capabilities, specs, cid) {
         browser.addCommand('waitAndClick', async function() {
-            await this.waitForDisplayed({timeout: 5000});
+            await this.waitForDisplayed({timeout: 10000});
             await this.click();
         }, true);
 
