@@ -36,6 +36,7 @@
   "dependencies": {
     "allure-commandline": "^2.24.0",
     "chai": "^4.3.7",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "wdio": "^6.0.1"
   }
 }
