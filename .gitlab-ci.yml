@@ -11,6 +11,8 @@ API Tests:
   artifacts:
     when: always
     paths:
-      - ./mochawesome-report
+      - ./report
+    reports: 
+     mochawesome: /mochawesome-report/mochawesome.json
     expire_in: 1 week
 
