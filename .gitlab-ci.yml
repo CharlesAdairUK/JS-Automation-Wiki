@@ -15,5 +15,5 @@ BDD Tests:
     paths:
       - ./report
     reports: 
-      junit: ./report/results.xml
+      junit: ./report-${options.cid}.xml
     expire_in: 1 week
