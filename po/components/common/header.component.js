@@ -9,7 +9,7 @@ class HeaderComponent extends BaseComponent {
         const selectors = {
             hamburgerMenuBtn: '.vector-main-menu-landmark',
             wikiHomeIcon: 'img[class="mw-logo-icon"]',
-            searchInputBox: 'input[name="search"]',
+            searchInputBox: 'input[class="cdx-text-input__input"]',
             searchSubmitBtn: 'button[class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button"]',
             // searchSubtmitBtn: 'button[class=".cdx-button.cdx-search-input__end-button');
             createAccountBtn: 'li[id="pt-createaccount-2"]',
