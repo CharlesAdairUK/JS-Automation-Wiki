@@ -205,9 +205,14 @@ exports.config = {
    */
     beforeSession: function(config, capabilities, specs, cid) {
         browser.addCommand('waitAndClick', async function() {
-            await this.waitForDisplayed({timeout: 10000});
+            await this.waitForDisplayed({timeout: 5000});
             await this.click();
         }, true);
+        browser.addCommand('scrollToElement', async function() {
+            await this.execute(function(el) {
+                el.scrollIntoView();
+            });
+        });
 
         browser.addCommand('waitForPageToLoad', function(timeout = 10000) {
             return browser.waitUntil(

@@ -14,6 +14,7 @@ describe('Test Suite', () => {
     });
 
     it('Search for \'EPAM\'', async () => {
+        await page('homepage').headerComponent.data('searchInputBox').scrollIntoView();
         await page('homepage').headerComponent.data('searchInputBox').setValue('Epam');
         await page('homepage').headerComponent.data('searchSubmitBtn').waitAndClick();
         const pageTitle = await browser.getTitle();
